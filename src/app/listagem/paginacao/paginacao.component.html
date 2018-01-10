@@ -1,0 +1,17 @@
+<nav aria-label="Page navigation" *ngIf="count > 0">
+  <ul class="pagination">
+    <li>
+      <a href="#0" (click)="onPrev($event)" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li *ngFor="let pageNum of getPages()">
+      <a href="#0" (click)="onPage(pageNum,$event)">{{pageNum}}</a>
+    </li>
+    <li>
+      <a href="#0" (click)="onNext(true,$event)" aria-label="Next" >
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

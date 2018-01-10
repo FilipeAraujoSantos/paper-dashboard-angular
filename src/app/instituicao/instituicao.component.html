@@ -1,0 +1,8 @@
+<listagem   [titulo]="titulo" 
+            [data]="data" 
+            [colunasTitulo]="colunas" 
+            [totalResultados]="totalResultados"
+            [atributosIgnorados]='["token","teste"]'
+            (doEdicao)="editarRegistro($event)"
+            (doExclusao)="excluirRegistro($event)">
+</listagem>

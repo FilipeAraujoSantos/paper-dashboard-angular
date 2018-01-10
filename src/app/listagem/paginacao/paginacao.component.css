@@ -1,0 +1,8 @@
+.pagination{
+    margin: 0;
+    
+}
+
+.pagination>li>a{
+    color: black;
+}

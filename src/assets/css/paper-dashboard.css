@@ -547,7 +547,7 @@ hr {
 }
 .sidebar[data-active-color="danger"] .nav li.active > a,
 .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a {
-  color: #DD0330;
+  color: #3772B9;
   opacity: 1;
 }
 
@@ -1761,8 +1761,8 @@ textarea.form-control {
 }
 .footer nav ul li {
   display: inline-block;
-  padding: 10px 15px;
-  margin: 15px 3px;
+  padding: 5px 15px;
+  margin: 5px 3px;
   line-height: 20px;
   text-align: center;
 }
@@ -1776,10 +1776,10 @@ textarea.form-control {
 }
 .footer .copyright {
   color: #66615b;
-  padding: 10px 15px;
+  padding: 4px 15px;
   font-size: 14px;
   white-space: nowrap;
-  margin: 15px 3px;
+  margin: 5px 3px;
   line-height: 20px;
   text-align: center;
 }
@@ -3986,4 +3986,5 @@ Copyright (c) 2015 Daniel Eden
   .fixed-plugin .dropdown-menu:after {
     display: none;
   }
+
 }

@@ -1,0 +1,45 @@
+h3{
+    margin-top:0;
+}
+
+.navbar-default{
+    margin: 0;
+    padding: 1rem;
+    min-height: 1rem;  /* Fallback for browsers do NOT support vh unit */    
+    min-width: 100%;
+}
+
+#lista{
+    margin: 0;
+}
+
+#procurar{
+    height: 3.2rem;
+}
+
+#sizing-addon3{
+    min-height: 1rem;  /* Fallback for browsers do NOT support vh unit */        
+}
+
+.table>thead>tr>th {
+    text-align: center;
+    min-height: 1rem;
+    padding: 10px 0;
+}
+.table>tbody>tr>td {
+    text-align: center;
+    min-height: 1rem;
+    padding: 10px 0;
+}
+
+.selecao-registros{
+    width: 6rem;
+}
+
+.pagination{
+    margin: 0;
+}
+
+.pagination>li>a{
+    color: black;
+}

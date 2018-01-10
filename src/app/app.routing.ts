@@ -8,6 +8,8 @@ import { IconsComponent }   from './icons/icons.component';
 import { MapsComponent }   from './maps/maps.component';
 import { NotificationsComponent }   from './notifications/notifications.component';
 import { UpgradeComponent }   from './upgrade/upgrade.component';
+import { BaseDadosComponent } from "app/base-dados/base-dados.component";
+import { InstituicaoComponent } from "app/instituicao/instituicao.component";
 
 export const AppRoutes: Routes = [
     {
@@ -44,7 +46,11 @@ export const AppRoutes: Routes = [
         component: NotificationsComponent
     },
     {
-        path: 'upgrade',
-        component: UpgradeComponent
+        path: 'instituicao',
+        component: InstituicaoComponent
+    },    
+    {
+        path: 'basedados',
+        component: BaseDadosComponent
     }
 ]

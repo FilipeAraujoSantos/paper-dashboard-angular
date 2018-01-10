@@ -1,0 +1,75 @@
+
+<div>
+  <input type="hidden" [(ngModel)]="paginaAtual">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid ">
+      <div class="row">            
+        <div class="col-sm-4 col-md-8">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3">Registros por Página</span>
+            <select class="form-control selecao-registros" aria-describedby="sizing-addon3" (change)="alterarResultadosPorPagina($event)">
+              <option>1</option>
+              <option>2</option>
+              <option selected>5</option>
+            </select>
+          </div>
+        </div>     
+        <div class="col-sm-8 col-md-4">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon " id="sizing-addon3"><span class="ti-search"></span> </span>
+            <input type="text" id="procurar" class="form-control" placeholder="Filtar..." aria-describedby="sizing-addon3" [(ngModel)]="filtro"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <table id="lista" class="table table-bordered table-hover table-responsive" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+      <th *ngFor="let titulo of colunasTitulo">
+        <a href="#0" alt="Ordenar" (click)="setColunaParaOrdenacao($event,titulo.ordenacao)">
+          {{titulo.descricao}}<span class="pull-right ti-angle-double-down" style="padding-right: 10px;" aria-hidden="true"></span>
+        </a>
+      </th>
+      <th>Ações</th>   
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registro of filtar()">
+        <td *ngFor="let atributo of getArrayOfAtributos(registro)">
+          {{atributo}}
+        </td>
+        <td>
+            <botao-listagem-editar [id]=registro.id (goEdicao)="listagemEdicao($event)"></botao-listagem-editar>
+            <botao-listagem-excluir [id]=registro.id (goExclusao)="listagemExclusao($event)"></botao-listagem-excluir>
+        </td>
+      </tr>
+    </tbody>
+  </table>   
+  <nav class="navbar navbar-default">
+    <div class="row">            
+      <div class="col-sm-4 col-md-3">
+        <div class="container-fluid pull-left">
+          <div class="input-group input-group-sm">
+              <span class="input-group-addon " id="sizing-addon3">Pagina Atual </span>
+              <input type="text" readonly="readonly" class="form-control" aria-describedby="sizing-addon3" [value]="paginaAtual" style="text-align:center;"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-md-9">
+        <div class="container-fluid pull-right">
+          <paginacao
+                  [count]="totalResultados"
+                  [page]="paginaAtual"
+                  [perPage]="getNumeroRegistrosSelecionado()"
+                  [pagesToShow]="5"
+                  [loading]="isLoaded"
+                  (goPrev)="paginaAnterior($event)"
+                  (goNext)="paginaPosterior($event)"
+                  (goPage)="alterarPagina($event)">
+          </paginacao>          
+        </div>
+      </div>
+    </div>
+  </nav>   
+</div>  

@@ -1,0 +1,10 @@
+
+<button id="botao-excluir" class="btn btn-danger btn-xs" (click)="showDialog = !showDialog">
+    <span class="ti-trash" aria-hidden="true"></span>
+</button>
+
+<modal-listagem [(visible)]="showDialog">
+    <h3>Deseja realmente excluir esse registro?</h3>
+    <button (click)="onExclusao($event)" class="btn btn-danger" >Sim</button>
+    <button (click)="showDialog = !showDialog" class="btn btn-default">Não</button>
+</modal-listagem>

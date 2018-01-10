@@ -1,0 +1,31 @@
+.login{
+    margin-top: 0;  /*1.1em;*/
+}
+
+.login-avatar {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: 0;
+}
+
+.navbar .navbar-nav > li > a{
+    line-height: 1.42857;
+    margin: 5px 0px;
+    padding: 10px 15px 0 15px;
+}
+
+#botao-menu-status{
+    line-height: 1.42857;
+    margin: 5px 0px;
+    padding: 20px 15px 0 15px;
+}
+
+#botao-menu-notificacao{
+    line-height: 1.42857;
+    margin: 5px 0px;
+    padding: 20px 15px 0 15px;
+}
